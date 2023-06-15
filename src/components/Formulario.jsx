@@ -11,11 +11,13 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    setNombre(paciente.nombre)
-    setPropietario(paciente.propietario)
-    setEmail(paciente.email)
-    setFecha(paciente.fecha)
-    setSintomas(paciente.sintomas)
+    if(paciente.id){
+      setNombre(paciente.nombre)
+      setPropietario(paciente.propietario)
+      setEmail(paciente.email)
+      setFecha(paciente.fecha)
+      setSintomas(paciente.sintomas)
+    }
   }, [paciente])
 
   
